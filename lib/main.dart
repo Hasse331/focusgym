@@ -6,6 +6,7 @@ void main() {
 }
 
 var kHighlightColor = const Color.fromARGB(255, 255, 0, 0);
+var kforegroundColor = const Color.fromARGB(255, 200, 200, 200);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -21,18 +22,27 @@ class MyApp extends StatelessWidget {
           shadow: kHighlightColor,
           // ···
           brightness: Brightness.dark,
-          primary: kHighlightColor,
+          primary: const Color.fromARGB(255, 14, 145, 21),
         ),
         appBarTheme: const AppBarTheme().copyWith(
           backgroundColor: const Color.fromARGB(255, 60, 2, 2),
-          foregroundColor: const Color.fromARGB(255, 200, 200, 200),
+          foregroundColor: kforegroundColor,
           shadowColor: kHighlightColor,
           elevation: 3,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.black,
+            foregroundColor: kforegroundColor,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(3)),
+            textStyle: const TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
       ),
       home: Scaffold(
           appBar: AppBar(
-            title: const Text('FocusGym App'),
+            title: const Text('FocusGym - focus on what matters'),
           ),
           body: Container(
             decoration: const BoxDecoration(
@@ -49,7 +59,16 @@ class MyApp extends StatelessWidget {
                 child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                const Text("Welcome to Focus Gym app"),
+                const Text(
+                  "Welcome to Focus Gym app",
+                  style: TextStyle(fontSize: 25),
+                ),
+                const Text(
+                  "Work hard and focus on what matters",
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
                 ElevatedButton(
                   onPressed: () {},
                   child: Text(
