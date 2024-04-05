@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:focusgym/home.dart';
-import 'package:focusgym/layout.dart';
+import 'package:focusgym/custom_widgets/layout.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(context) {
     return MaterialApp(
       title: 'FocusGym',
       theme: ThemeData(
