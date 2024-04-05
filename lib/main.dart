@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:focusgym/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -10,6 +11,7 @@ var kforegroundColor = const Color.fromARGB(255, 200, 200, 200);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -55,29 +57,7 @@ class MyApp extends StatelessWidget {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             )),
-            child: Center(
-                child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const Text(
-                  "Welcome to Focus Gym app",
-                  style: TextStyle(fontSize: 25),
-                ),
-                const Text(
-                  "Work hard and focus on what matters",
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Start workout',
-                    style: GoogleFonts.bebasNeue(),
-                  ),
-                )
-              ],
-            )),
+            child: const Home(),
           )),
     );
   }
