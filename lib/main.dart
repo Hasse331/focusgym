@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:focusgym/home.dart';
+import 'package:focusgym/layout.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -42,23 +43,8 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: Scaffold(
-          appBar: AppBar(
-            title: const Text('FocusGym - focus on what matters'),
-          ),
-          body: Container(
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 0, 0, 0),
-                Color.fromARGB(255, 108, 11, 11),
-                Color.fromARGB(255, 17, 2, 2),
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            )),
-            child: const Home(),
-          )),
+      home: const AppLayout(
+          titleText: "FocusGym - focus on what matters", child: Home()),
     );
   }
 }

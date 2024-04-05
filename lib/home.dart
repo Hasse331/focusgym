@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:focusgym/layout.dart';
 import 'package:focusgym/workouts.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -22,9 +23,11 @@ class Home extends StatelessWidget {
         ),
         ElevatedButton(
           onPressed: () {
-            Navigator.of(context).push(
+            Navigator.push(
+              context,
               MaterialPageRoute(
-                builder: (context) => const Workouts(),
+                builder: (context) => const AppLayout(
+                    titleText: "Select Workout", child: Workouts()),
               ),
             );
           },
