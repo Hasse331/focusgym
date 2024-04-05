@@ -12,11 +12,11 @@ class Home extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         const Text(
-          "Welcome to Focus Gym app",
+          "Focused Journey to Excellence",
           style: TextStyle(fontSize: 25),
         ),
         const Text(
-          "Work hard and focus on what matters",
+          "No Distractions. Just Results.",
         ),
         const SizedBox(
           height: 20,

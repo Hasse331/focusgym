@@ -25,7 +25,8 @@ class MyApp extends StatelessWidget {
           shadow: kHighlightColor,
           // ···
           brightness: Brightness.dark,
-          primary: const Color.fromARGB(255, 14, 145, 21),
+          primary: kHighlightColor,
+          onPrimary: kHighlightColor,
         ),
         appBarTheme: const AppBarTheme().copyWith(
           backgroundColor: const Color.fromARGB(255, 60, 2, 2),
