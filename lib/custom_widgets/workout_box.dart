@@ -22,7 +22,8 @@ class WorkoutBox extends StatelessWidget {
           context,
           MaterialPageRoute(
               builder: (context) => AppLayout(
-                  titleText: workouts[index].title, child: WorkoutView(index))),
+                  titleText: '${workoutsData[index].title} workout',
+                  child: WorkoutView(index))),
         );
       },
       child: Container(

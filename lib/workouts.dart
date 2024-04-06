@@ -22,7 +22,7 @@ class Workouts extends StatelessWidget {
         ),
         itemBuilder: (context, index) {
           return WorkoutBox(
-            boxTitle: workouts[index].title,
+            boxTitle: workoutsData[index].title,
             boxIcon: "Icon",
             index: index,
           ); // Your custom widget
