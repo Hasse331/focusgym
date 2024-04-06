@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:focusgym/custom_widgets/workout_box.dart';
+import 'package:focusgym/data/workouts_data.dart';
 
 class Workouts extends StatelessWidget {
   const Workouts({super.key});
@@ -12,7 +13,7 @@ class Workouts extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 25),
       child: GridView.builder(
-        itemCount: 10, // Number of items
+        itemCount: 6, // Number of items
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount:
               crossAxisCount, // 1 for narrow screens, 2 for wider screens
@@ -20,7 +21,11 @@ class Workouts extends StatelessWidget {
               2, // Adjust based on your item's content and desired aspect ratio
         ),
         itemBuilder: (context, index) {
-          return const WorkoutBox(); // Your custom widget
+          return WorkoutBox(
+            boxTitle: workouts[index].title,
+            boxIcon: "Icon",
+            index: index,
+          ); // Your custom widget
         },
       ),
     );
