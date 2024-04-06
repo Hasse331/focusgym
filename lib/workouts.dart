@@ -11,7 +11,7 @@ class Workouts extends StatelessWidget {
     int crossAxisCount = screenWidth > 800 ? 2 : 1;
 
     return Container(
-      margin: EdgeInsets.only(top: 20),
+      margin: const EdgeInsets.only(top: 20),
       child: GridView.builder(
         itemCount: 6, // Number of items
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
