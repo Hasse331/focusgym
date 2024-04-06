@@ -21,6 +21,26 @@ class Workouts extends StatelessWidget {
               2, // Adjust based on your item's content and desired aspect ratio
         ),
         itemBuilder: (context, index) {
+          if (index == 0) {
+            return Column(
+              children: [
+                const Text(
+                  "Select today's workout: ",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
+                ),
+                Expanded(
+                  child: WorkoutBox(
+                    boxTitle: workoutsData[index].title,
+                    boxIcon: "Icon",
+                    index: index,
+                  ), // You custom widget
+                )
+              ],
+            );
+          }
           return WorkoutBox(
             boxTitle: workoutsData[index].title,
             boxIcon: "Icon",
