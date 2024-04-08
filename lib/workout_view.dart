@@ -10,12 +10,12 @@ class WorkoutView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(15),
+      margin: const EdgeInsets.all(5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(
-            height: 20,
+            height: 15,
           ),
           Text(
             "Workout ideas for your today's ${selectWorkout[index].title} workout:  ",
@@ -37,34 +37,22 @@ class WorkoutView extends StatelessWidget {
 }
 
 List<Widget> _buildListTitles() {
-  return const [
-    ListTile(
-      title: Text(
-          '1. Minimize phone usage. Don\'t stare your phone. None of mindless scrolling, chatting, etc. Only lifting. '),
-    ),
-    ListTile(
-      title: Text(
-          '2. You can select one workout or combine two. Focus on only one workout you have selected (this view) at the time and then continue to next one.'),
-    ),
-    ListTile(
-      title: Text(
-          '3. Choose freely exercises you like. Do always as many reps as you can. <15 reps, incerease weights. >4-8, decrease weights.'),
-    ),
-    ListTile(
-      title:
-          Text('4. Do 3-5 sets and as many different exercieses as suggested.'),
-    ),
-    ListTile(
-      title: Text(
-          '5. Always drink water during short (1-4m) breaks between sets.'),
-    ),
-    ListTile(
-      title: Text(
-          '6. If you start to feel nausea and want to vomit you have worked hard enough. :D'),
-    ),
-    ListTile(
-      title: Text(
-          '7. Have extremely positive attitude towards every single workout.'),
-    ),
+  const List<String> titles = [
+    '1. Minimize phone usage. Don\'t stare your phone. None of mindless scrolling, chatting, etc. Only lifting.',
+    '2. You can select one workout or combine two. Focus on only one workout you have selected (this view) at the time and then continue to next one.',
+    '3. Choose freely exercises you like. Do always as many reps as you can. <15 reps, increase weights. >4-8, decrease weights.',
+    '4. Do 3-5 sets and as many different exercises as suggested.',
+    '5. Always drink water during short (1-4m) breaks between sets.',
+    '6. If you start to feel nausea and want to vomit you have worked hard enough. :D',
+    '7. Have extremely positive attitude towards every single workout, understand the tremendous benefits and remember that each rep makes you stronger. Mentally and physically.',
   ];
+
+  return titles
+      .map(
+        (title) => ListTile(
+            dense: true,
+            contentPadding: const EdgeInsets.symmetric(horizontal: 15),
+            title: Text(title)),
+      )
+      .toList();
 }
