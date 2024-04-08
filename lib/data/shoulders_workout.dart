@@ -1,7 +1,6 @@
 import 'package:focusgym/data/workouts_data.dart';
 
 List<Workout> shouldersWorkout = [
-  Workout("Pullup", "image_url", "description", links: ["link1", "link2"]),
   Workout("Dumbbell Shoulder Press", "image_url",
       "Seated or standing, press the dumbbells overhead, then lower back down to shoulder height."),
   Workout("Lateral Raises", "image_url",
@@ -42,6 +41,4 @@ List<Workout> shouldersWorkout = [
       "Perform shoulder presses using a dedicated shoulder press machine."),
   Workout("Reverse Pec Deck Fly", "image_url",
       "Targets the rear delts by pulling the arms back against resistance."),
-  Workout("Core", "image_url", "description"),
-  Workout("Cardio", "image_url", "description"),
 ];

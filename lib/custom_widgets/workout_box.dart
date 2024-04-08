@@ -6,25 +6,29 @@ import 'package:focusgym/workout_view.dart';
 class WorkoutBox extends StatelessWidget {
   const WorkoutBox(
       {super.key,
+      this.isSelectWorkoutView = false,
       required this.boxTitle,
-      required this.boxIcon,
+      this.boxDescription,
       required this.index});
 
   final String boxTitle;
-  final String boxIcon;
+  final String? boxDescription;
   final int index;
+  final bool isSelectWorkoutView;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) => AppLayout(
-                  titleText: '${workoutsData[index].title} workout',
-                  child: WorkoutView(index))),
-        );
+        if (isSelectWorkoutView) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => AppLayout(
+                    titleText: '${selectWorkout[index].title} workout',
+                    child: WorkoutView(index))),
+          );
+        }
       },
       child: Container(
         margin:
@@ -44,9 +48,23 @@ class WorkoutBox extends StatelessWidget {
           color: const Color.fromARGB(255, 18, 3, 3),
         ),
         child: Center(
-          child: Text(
-            boxTitle,
-            style: const TextStyle(color: Colors.white, fontSize: 25),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                boxTitle,
+                style: const TextStyle(color: Colors.white, fontSize: 25),
+              ),
+              if (!isSelectWorkoutView)
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    boxDescription!, // ! because this must be truthy
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(color: Colors.white, fontSize: 14),
+                  ),
+                )
+            ],
           ),
         ),
       ),

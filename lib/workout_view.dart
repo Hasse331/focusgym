@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:focusgym/custom_widgets/display_workouts.dart';
 import 'package:focusgym/data/workouts_data.dart';
 
 class WorkoutView extends StatelessWidget {
@@ -24,41 +25,46 @@ class WorkoutView extends StatelessWidget {
               fontSize: 18,
             ),
           ),
-          const ExpansionTile(
-            title: Text("Get best out form your workout:"),
-            children: <Widget>[
-              ListTile(
-                title: Text(
-                    '1. Minimize phone usage. Don\'t stare your phone. None of mindless scrolling, chatting, etc. Only lifting. '),
-              ),
-              ListTile(
-                title: Text(
-                    '2. You can select one workout or combine two. Focus on only one workout you have selected (this view) at the time and then continue to next one.'),
-              ),
-              ListTile(
-                title: Text(
-                    '3. Choose freely exercises you like. Do always as many reps as you can. <15 reps, incerease weights. >4-8, decrease weights.'),
-              ),
-              ListTile(
-                title: Text(
-                    '4. Do 3-5 sets and as many different exercieses as suggested.'),
-              ),
-              ListTile(
-                title: Text(
-                    '5. Always drink water during short (1-4m) breaks between sets.'),
-              ),
-              ListTile(
-                title: Text(
-                    '6. If you start to feel nausea and want to vomit you have worked hard enough. :D'),
-              ),
-              ListTile(
-                title: Text(
-                    '7. Have extremely positive attitude towards every single workout, understand the tremendous benefits and remember that each rep makes you stronger.'),
-              ),
-            ],
-          )
+          ExpansionTile(
+            title: const Text("Get best out form your workout:"),
+            children: <Widget>[..._buildListTitles()],
+          ),
+          Expanded(child: DisplayWorkouts(workoutList: workoutLists[index]))
         ],
       ),
     );
   }
+}
+
+List<Widget> _buildListTitles() {
+  return const [
+    ListTile(
+      title: Text(
+          '1. Minimize phone usage. Don\'t stare your phone. None of mindless scrolling, chatting, etc. Only lifting. '),
+    ),
+    ListTile(
+      title: Text(
+          '2. You can select one workout or combine two. Focus on only one workout you have selected (this view) at the time and then continue to next one.'),
+    ),
+    ListTile(
+      title: Text(
+          '3. Choose freely exercises you like. Do always as many reps as you can. <15 reps, incerease weights. >4-8, decrease weights.'),
+    ),
+    ListTile(
+      title:
+          Text('4. Do 3-5 sets and as many different exercieses as suggested.'),
+    ),
+    ListTile(
+      title: Text(
+          '5. Always drink water during short (1-4m) breaks between sets.'),
+    ),
+    ListTile(
+      title: Text(
+          '6. If you start to feel nausea and want to vomit you have worked hard enough. :D'),
+    ),
+    ListTile(
+      title: Text(
+          '7. Have extremely positive attitude towards every single workout, understand the tremendous benefits and remember that each rep makes you stronger.'),
+    ),
+  ];
 }

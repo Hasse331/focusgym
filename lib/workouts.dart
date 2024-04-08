@@ -7,6 +7,6 @@ class Workouts extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return DisplayWorkouts(itemCount: 7, listName: selectWorkout);
+    return DisplayWorkouts(workoutList: selectWorkout);
   }
 }
