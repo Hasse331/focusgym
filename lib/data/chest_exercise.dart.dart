@@ -1,0 +1,28 @@
+import 'package:focusgym/data/workouts_data.dart';
+
+List<Workout> chestWorkout = [
+  Workout("Bench Press", "image_url",
+      "Lie on your back on a bench and press a barbell or dumbbells from chest level up to full extension."),
+  Workout("Push-Up", "image_url",
+      "With hands shoulder-width apart, lower your body until your chest nearly touches the floor, then push yourself back up."),
+  Workout("Incline Bench Press", "image_url",
+      "Similar to the bench press but performed on an incline bench to target the upper chest."),
+  Workout("Decline Bench Press", "image_url",
+      "Performed on a decline bench to target the lower chest."),
+  Workout("Chest Fly", "image_url",
+      "Lie on a bench and perform a fly motion with dumbbells, moving them from a position out to your sides to above your chest."),
+  Workout("Cable Fly", "image_url",
+      "Stand between two cable machines and perform a fly motion, bringing the handles from out to the sides to in front of you."),
+  Workout("Pec Deck Machine", "image_url",
+      "Sit on the pec deck machine and perform a fly motion, bringing the pads together in front of you."),
+  Workout("Dumbbell Pullover", "image_url",
+      "Lie on your back on a bench, hold a dumbbell with both hands above your chest, and lower it back over your head."),
+  Workout("Dips - Chest Version", "image_url",
+      "Perform dips on parallel bars, leaning forward to emphasize the chest muscles."),
+  Workout("Svend Press", "image_url",
+      "Press two small plates together between your palms and push them straight out in front of your chest."),
+  Workout("Push-Up Variations", "image_url",
+      "Includes diamond push-ups, wide-arm push-ups, and decline push-ups for targeting different parts of the chest."),
+  Workout("Cable Crossover", "image_url",
+      "Perform a crossover motion with cables from high to low, targeting the lower chest."),
+];

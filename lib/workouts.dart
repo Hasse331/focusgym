@@ -13,7 +13,7 @@ class Workouts extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 20),
       child: GridView.builder(
-        itemCount: 6, // Number of items
+        itemCount: 7, // Number of items
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount:
               crossAxisCount, // 1 for narrow screens, 2 for wider screens

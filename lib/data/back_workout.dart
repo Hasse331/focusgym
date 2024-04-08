@@ -1,0 +1,28 @@
+import 'package:focusgym/data/workouts_data.dart';
+
+List<Workout> backWorkout = [
+  Workout("Pull-Up", "image_url",
+      "Grip the pull-up bar with your palms facing away from you and pull yourself up until your chin is above the bar."),
+  Workout("Lat Pulldown", "image_url",
+      "Sit at a lat pulldown machine and pull the bar down towards your chest, keeping your back straight."),
+  Workout("Barbell Bent-Over Row", "image_url",
+      "With knees slightly bent, bend over at the waist and pull the barbell towards your lower chest."),
+  Workout("Dumbbell Single-Arm Row", "image_url",
+      "Support yourself on a bench with one hand and pull a dumbbell upwards with your other hand."),
+  Workout("Seated Cable Row", "image_url",
+      "Sit at a cable row machine and pull the handle towards your waist, keeping your back straight."),
+  Workout("Deadlift", "image_url",
+      "Lift a barbell or dumbbells from the ground to standing position, keeping your back straight."),
+  Workout("T-Bar Row", "image_url",
+      "Stand on the T-bar row machine, bend over, and pull the bar towards your chest."),
+  Workout("Pull-Over", "image_url",
+      "Lie on a bench and pull a dumbbell from behind your head to above your chest."),
+  Workout("Inverted Row", "image_url",
+      "Lie underneath a bar and pull yourself up towards the bar, keeping your body straight."),
+  Workout("Face Pull", "image_url",
+      "Pull the rope towards your face while flaring your elbows out, targeting the rear deltoids and upper back."),
+  Workout("Hyperextensions", "image_url",
+      "Using a hyperextension bench, lower and raise your upper body, targeting the lower back."),
+  Workout("Chin-Up", "image_url",
+      "Grip the bar with palms facing you and pull yourself up until your chin is over the bar, focusing on the upper back."),
+];

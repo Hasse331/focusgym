@@ -10,6 +10,7 @@ List<Workout> workoutsData = [
   Workout("Soulders", "image_url", "description", links: ["link1", "link2"]),
   Workout("Chest", "image_url", "description"),
   Workout("Back", "image_url", "description"),
+  Workout("Arms", "image_url", "description"),
   Workout("Legs", "image_url", "description"),
   Workout("Core", "image_url", "description"),
   Workout("Cardio", "image_url", "description"),
