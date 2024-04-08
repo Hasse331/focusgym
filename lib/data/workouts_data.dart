@@ -6,7 +6,7 @@ class Workout {
   Workout(this.title, this.image, this.description, {this.links});
 }
 
-List<Workout> workoutsData = [
+List<Workout> selectWorkout = [
   Workout("Soulders", "image_url", "description", links: ["link1", "link2"]),
   Workout("Chest", "image_url", "description"),
   Workout("Back", "image_url", "description"),

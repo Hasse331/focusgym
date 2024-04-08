@@ -17,7 +17,7 @@ class WorkoutView extends StatelessWidget {
             height: 20,
           ),
           Text(
-            "Workout ideas for your today's ${workoutsData[index].title} workout:  ",
+            "Workout ideas for your today's ${selectWorkout[index].title} workout:  ",
             textAlign: TextAlign.center,
             style: const TextStyle(
               color: Colors.white,
