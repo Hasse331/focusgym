@@ -64,7 +64,7 @@ List<Widget> _buildListTitles() {
     ),
     ListTile(
       title: Text(
-          '7. Have extremely positive attitude towards every single workout, understand the tremendous benefits and remember that each rep makes you stronger.'),
+          '7. Have extremely positive attitude towards every single workout.'),
     ),
   ];
 }
