@@ -13,10 +13,16 @@ class Home extends StatelessWidget {
       children: <Widget>[
         const Text(
           "Focused Journey to Excellence",
-          style: TextStyle(fontSize: 25),
+          style: TextStyle(
+            fontSize: 25,
+            color: Color.fromARGB(255, 200, 200, 200),
+          ),
         ),
         const Text(
           "No Distractions. Just Results.",
+          style: TextStyle(
+            color: Color.fromARGB(255, 200, 200, 200),
+          ),
         ),
         const SizedBox(
           height: 20,
