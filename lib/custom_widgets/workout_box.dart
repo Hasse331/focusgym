@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:focusgym/custom_widgets/layout.dart';
 import 'package:focusgym/data/workouts_data.dart';
@@ -35,7 +36,11 @@ class WorkoutBox extends StatelessWidget {
           // If check is there because of apple's closed ecosystem problems, so
           // not sure if it will work or not. So have to test that with IOS
           // device / simulator later.
-          if (!Platform.isIOS) launchURL(boxTitle);
+          if (kIsWeb) {
+            launchURL(boxTitle);
+          } else {
+            if (!Platform.isIOS) launchURL(boxTitle);
+          }
         }
       },
       child: Container(
