@@ -8,14 +8,14 @@ import 'package:focusgym/data/shoulders_workout.dart';
 
 class Workout {
   String title;
-  String image;
+  String link;
   String description;
   List<String>? links;
-  Workout(this.title, this.image, this.description, {this.links});
+  Workout(this.title, this.link, this.description, {this.links});
 }
 
 List<Workout> selectWorkout = [
-  Workout("Soulders", "image_url", "description", links: ["link1", "link2"]),
+  Workout("Shoulders", "image_url", "description"),
   Workout("Chest", "image_url", "description"),
   Workout("Back", "image_url", "description"),
   Workout("Arms", "image_url", "description"),
