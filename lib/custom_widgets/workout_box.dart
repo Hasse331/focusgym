@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:focusgym/custom_widgets/layout.dart';
 import 'package:focusgym/data/workouts_data.dart';
+import 'package:focusgym/utils/launch_url.dart';
 import 'package:focusgym/workout_view.dart';
 
 class WorkoutBox extends StatelessWidget {
@@ -28,6 +31,10 @@ class WorkoutBox extends StatelessWidget {
                     titleText: '${selectWorkout[index].title} workout',
                     child: WorkoutView(index))),
           );
+        } else {
+          // If check is there because of apple's closed ecosystem, so
+          // not sure if it will work or not.
+          if (!Platform.isIOS) launchURL(boxTitle);
         }
       },
       child: Container(
