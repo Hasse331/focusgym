@@ -24,6 +24,7 @@ class WorkoutBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
+        // if selecthing the workout, like shoulders:
         if (isSelectWorkoutView) {
           Navigator.push(
             context,
@@ -32,6 +33,7 @@ class WorkoutBox extends StatelessWidget {
                     titleText: '${selectWorkout[index].title} workout',
                     child: WorkoutView(index))),
           );
+          // If in workout screen, opening google search link:
         } else {
           // If check is there because of apple's closed ecosystem problems, so
           // not sure if it will work or not. So have to test that with IOS
